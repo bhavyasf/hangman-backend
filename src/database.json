@@ -1,0 +1,13 @@
+{
+  "dev": {
+    "driver": "pg",
+    "user": "postgres",
+    "password": "postgres",
+    "host": "localhost",
+    "database": "hangman",
+    "port": "5432",
+    "schema": "public"
+  },
+  "sql-file": true
+
+}
