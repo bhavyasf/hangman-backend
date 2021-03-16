@@ -8,6 +8,7 @@ import {RepositoryMixin} from '@loopback/repository';
 import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
+import dotenv from 'dotenv';
 import {MySequence} from './sequence';
 
 export {ApplicationConfig};
@@ -17,7 +18,7 @@ export class HangmanBackendApplication extends BootMixin(
 ) {
   constructor(options: ApplicationConfig = {}) {
     super(options);
-
+    dotenv.config();
     // Set up the custom sequence
     this.sequence(MySequence);
 

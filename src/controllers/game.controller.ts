@@ -122,7 +122,7 @@ export class GameController {
         modifiedAt: new Date().toISOString(),
       });
       throw new HttpErrors.BadRequest(JSON.stringify({
-        message: guesses ? 'Incorrect letter!' : 'You have made all incorrect attempts',
+        message: guesses ? 'Incorrect letter!' : `You have made all incorrect attempts, the answer is ${completeWord}`,
         guesses,
       }));
     }
@@ -176,7 +176,7 @@ export class GameController {
         modifiedAt: new Date().toISOString(),
       });
       throw new HttpErrors.BadRequest(JSON.stringify({
-        message: guesses ? 'Incorrect Word!' : 'You have made all incorrect attempts',
+        message: guesses ? 'Incorrect Word!' : `You have made all incorrect attempts, the correct word was ${completeWord}`,
         guesses,
       }));
     }
