@@ -65,9 +65,42 @@ npm run lint:fix
 npm test
 ```
 
+## API Documentation
+### POST /games
+
+Description: create a new game which creates a random word to be guessed
+using  web service.
+
+### PATCH /games/{id}/letters/{letter}
+#### Description:
+API used to guess a letter. Will throw error if it is already won
+or no guesses left
+#### Request parameters
+id: unique id of the game
+letter: guessed letter which will be validated
+
+### PATCH /games/{id}/words/{word}
+#### Description
+API used to guess a word. Will throw error if it is already won or
+no guesses left
+
+#### Request Parameters
+id: id of the game
+word: Word to be guessed
+
+### GET /games/{id}
+####  Description
+Fetch game details by id. Will throw not found error if the id is not found
+#### Request Parameters
+id: id of the game
+
+
+
 ## What's next
 
 Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
 understand how you can continue to add features to this application.
 
 [![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+## TDD of the Application:
+https://docs.google.com/document/d/1bfrhWLe_AEcESZjAbrfa86ONytfYONdaUNvQDBvDrnI/edit#
